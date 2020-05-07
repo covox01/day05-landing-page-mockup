@@ -1,0 +1,238 @@
+.bar {
+   position: absolute;
+   left: 0;
+   height: 35px;
+}
+
+.bar2 {
+   width: 35px;
+}
+
+#horizontalLine {
+   position: absolute;
+   left: 0;
+   top: 45px;
+   width: 100%;
+   height: 0.5px;
+   background: $darkGrey;
+}
+
+#verticalLine {
+   position: absolute;
+   top: 0;
+   left: 80px;
+   height: 100vh;
+   width: 0.5px;
+   background: rgb(159, 159, 159);
+   transition: all, 0.35s;
+}
+
+#detail {
+   display: block;
+   position: absolute;
+   bottom: 120px;
+   left: 0px;
+   transform: rotateZ(-90deg);
+   color: $darkGrey;
+   font-size: 0.8rem;
+   letter-spacing: 2px;
+   transition: all, 0.35s;
+}
+
+#detail2 {
+   display: block;
+   position: absolute;
+   right: 50px;
+   bottom: 50px;
+   transform: rotate(90deg);
+   font-size: 5.5rem;
+   font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+   font-weight: 400;
+   color: rgb(75, 75, 75);
+}
+
+// ===== Horizontal Bar Graphics ===== >
+
+#barContainer {
+   position: absolute;
+   top: 85px;
+   height: 105px;
+   min-width: 350px;
+   width: 50%;
+   max-width: 650px;
+   #horizontalBar1 {
+      left: 0;
+      top: 0px;
+      width: 100%;
+      background: $darkGrey;
+   }
+   #horizontalBar2 {
+      left: 0;
+      top: 35px;
+      width: 75%;
+      max-width: 500px;
+      background: $middleGrey;
+   }
+   #horizontalBar3 {
+      left: 0;
+      top: 70px;
+      width: 50%;
+      background: $lightGrey;
+   }
+}
+
+// ===== Vertical Bar Graphics ===== >
+
+#vertBarContainer {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: flex-end;
+   justify-content: right;
+   height: 80%;
+   #verticalBar1 {
+      height: 100%;
+      background: $darkGrey;
+   }
+   #verticalBar2 {
+      height: 80%;
+      background: $middleGrey;
+   }
+   #verticalBar3 {
+      height: 70%;
+      width: 55px;
+      background: $lightGrey;
+   }
+}
+
+// ===== Building Styling =====>
+
+.bg {
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: absolute;
+}
+
+.building {
+   position: absolute;
+   bottom: -50px;
+   right: 15%;
+   width: 380px;
+   height: 780px;
+   overflow: hidden;
+   z-index: -10;
+   transition: all, 0.35s;
+}
+
+#buildingSegment1 {
+   background: url(../assets/building1.jpg);
+   background-position: -40px 30px;
+   background-size: contain;
+   background-repeat: no-repeat;
+   height: 577px;
+   width: 180px;
+   bottom: -0px;
+   right: 64px;
+   z-index: 20;
+   -webkit-backface-visibility: hidden;
+}
+
+#buildingSegment2 {
+   background: url(../assets/building2.jpg);
+   background-position: -30px 30px;
+   background-repeat: no-repeat;
+   background-size: contain;
+   height: 769px;
+   width: 280px;
+   bottom: 30px;
+   right: 35px;
+   z-index: 10;
+   -webkit-backface-visibility: hidden;
+   overflow: hidden;
+   //   border: 1px solid red;
+}
+
+#buildingSegment3 {
+   background: url(../assets/building3-1.jpg);
+   background-position: -25px 40px;
+   background-repeat: no-repeat;
+   background-size: contain;
+   height: 581px;
+   width: 186px;
+   bottom: -113px;
+   right: 225px;
+   z-index: 30;
+   -webkit-backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 1150px) {
+   .building {
+      right: 5%;
+   }
+}
+
+@media only screen and (max-width: 900px) {
+   #barContainer {
+      top: 45px;
+      #horizontalBar1 {
+         min-width: 450px;
+      }
+      #horizontalBar2 {
+         min-width: 350px;
+      }
+      #horizontalBar3 {
+         min-width: 250px;
+      }
+   }
+   #detail2 {
+      font-size: 4rem;
+      right: 65px;
+   }
+}
+
+@media only screen and (max-width: 800px) {
+   .building {
+      right: 8%;
+      // left: 10%;
+      bottom: -300px;
+      margin: 0 auto;
+   }
+}
+
+@media only screen and (max-width: 600px) {
+   #vertBarContainer,
+   #detail2 {
+      display: none;
+   }
+   .building {
+      right: -15%;
+   }
+   #verticalLine {
+      left: 43px;
+   }
+   #detail {
+      left: -32px;
+   }
+}
+
+@media only screen and (max-width: 460px) {
+   .building {
+      right: -25%;
+   }
+   #barContainer {
+      width: 100%;
+      #horizontalBar1,
+      #horizontalBar2,
+      #horizontalBar3 {
+         min-width: auto;
+      }
+   }
+}
+
+@media only screen and (max-width: 380px) {
+   .building {
+      right: -40%;
+   }
+}

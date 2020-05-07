@@ -1,0 +1,39 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+ul,
+li {
+   list-style: none;
+   color: rgb(49, 49, 49);
+   font-family: Helvetica, Arial, sans-serif;
+   letter-spacing: 2px;
+   font-weight: 300;
+   font-size: 0.7rem;
+}
+
+p {
+   margin: 10px 0 0 7px;
+   font-family: "Roboto", Arial, Helvetica, sans-serif;
+   font-weight: 300;
+   font-size: 0.9rem;
+   width: auto;
+   letter-spacing: 1px;
+   word-spacing: 3px;
+   color: rgb(67, 67, 67);
+}
+
+a {
+   text-decoration: none;
+   color: $textGrey;
+}
+
+.container {
+   max-width: 1440px;
+   height: 100vh;
+   position: relative;
+   margin: 0 auto;
+   overflow: hidden;
+   display: flex;
+}
