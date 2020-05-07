@@ -242,8 +242,8 @@ a {
   padding: 16.5px 0;
   -webkit-transition: background-color, 0.35s;
   transition: background-color, 0.35s;
-  -webkit-transition: color, 0.5s;
-  transition: color, 0.5s;
+  -webkit-transition: all, 0.5s;
+  transition: all, 0.5s;
   outline: 0;
 }
 
@@ -563,6 +563,15 @@ a {
   #barContainer #horizontalBar2,
   #barContainer #horizontalBar3 {
     min-width: auto;
+  }
+}
+
+@media only screen and (max-width: 444px) {
+  #verticalLine {
+    left: 53px;
+  }
+  #detail {
+    left: -35px;
   }
 }
 

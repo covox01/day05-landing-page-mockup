@@ -231,6 +231,15 @@
    }
 }
 
+@media only screen and (max-width: 444px) {
+   #verticalLine {
+      left: 53px;
+   }
+   #detail {
+      left: -35px;
+   }
+}
+
 @media only screen and (max-width: 380px) {
    .building {
       right: -40%;
